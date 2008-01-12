@@ -8,9 +8,11 @@ Group:		Applications/Games
 Source0:	http://www.vattghern.pl/pliki/%{name}-%{version}.tgz
 # Source0-md5:	5a3f04080d8001e73e15353a06be5edc
 URL:		http://www.vattghern.pl/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel
+BuildRequires:	gtk+2-devel >= 1:2.0.0
+BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,6 +23,8 @@ Jest to oficjalny klient dla gry mudowej Vattghern.
 
 %prep
 %setup -q
+
+sed -i -e '/^CFLAGS=/d' configure.ac
 
 %build
 %{__aclocal}
