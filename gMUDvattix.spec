@@ -7,7 +7,7 @@ License:	GPL v2+
 Group:		Applications/Games
 Source0:	http://www.vattghern.pl/pliki/%{name}-%{version}.tgz
 # Source0-md5:	5a3f04080d8001e73e15353a06be5edc
-URL:		http://www.vattghern.pl/
+URL:		http://www.vattghern.com.pl/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 1:2.0.0
