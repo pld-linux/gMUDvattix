@@ -24,7 +24,7 @@ Jest to oficjalny klient dla gry mudowej Vattghern.
 %prep
 %setup -q
 
-sed -i -e '/^CFLAGS=/d' configure.ac
+%{__sed} -i -e '/^CFLAGS=/d' configure.ac
 
 %build
 %{__aclocal}
